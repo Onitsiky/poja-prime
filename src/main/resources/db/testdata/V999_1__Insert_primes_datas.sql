@@ -1,0 +1,1 @@
+insert into public.prime_number(id, "prime") values ('prime1_id', '5'), ('prime2_id', '9'), ('prime3_id', '13');

@@ -2,6 +2,7 @@ package com.poja.api.endpoint.rest.controller;
 
 import com.poja.api.conf.FacadeIT;
 import java.math.BigInteger;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -16,5 +17,11 @@ public class PrimeNumberControllerIT extends FacadeIT {
 
     int certainty = (int) (99.99 * 100);
     assertTrue(actual.isProbablePrime(certainty));
+  }
+
+  @Test
+  void get_generated_ok() {
+    List<BigInteger> actual = primeNumberController.generatedPrimes();
+    assertTrue(actual.size() == 4);
   }
 }
